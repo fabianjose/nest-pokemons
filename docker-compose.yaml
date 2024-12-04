@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6.0  # Usamos la versión más reciente estable   
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo:/data/db
+    environment:
+      MONGO_DATABASE : nest-pokemon  # Configuración de la base de datos inicial
